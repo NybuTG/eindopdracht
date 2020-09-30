@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* From the shapedivider generator: */
+.custom-shape-divider-bottom-1601375962 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1601375962 svg {
+    position: relative;
+    display: block;
+    width: calc(270% + 1.3px);
+    height: 230px;
+}
+
+.custom-shape-divider-bottom-1601375962 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+
+/* End of shapedivider mostly */
+
+#intro {
+	position: relative;
+	background: rgb(147,183,190);
+	background: linear-gradient(0deg, rgba(147,183,190,1) 0%, rgba(213,199,188,1) 100%);
+	min-height: 75vh;
+
+	font-family: 'Bebas Neue';
+	color: white;
+}
+
+#intro h1 {
+	text-align: center;
+	padding-top: 20vh;
+	font-size: 75px;
+		
+}
+
