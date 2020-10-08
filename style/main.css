@@ -5,34 +5,80 @@
 * {
 	margin: 0;
 	padding: 0;
-	--BBLUE: #93b7be;
+	--INDIGO: #004777;
+	--ORANGE: #FF7700;
 	--TWHITE: rgba(255, 255, 255, .6)
 } 
 
-/* From the shapedivider generator: */
-.custom-shape-divider-bottom-1601375962 {
+/* SHAPE DIVIDER STUFF */
+
+.custom-shape-divider-bottom-1602170659 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1601375962 svg {
+.custom-shape-divider-bottom-1602170659 svg {
     position: relative;
     display: block;
-    width: calc(270% + 1.3px);
-    height: 230px;
+    width: calc(100% + 1.3px);
+    height: 150px;
 }
 
-.custom-shape-divider-bottom-1601375962 .shape-fill {
+.custom-shape-divider-bottom-1602170659 .shape-fill {
+    fill: #e3e3e3;
+}
+
+.custom-shape-divider-bottom-1602174550 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1602174550 svg {
+    position: relative;
+    display: block;
+    width: calc(109% + 1.3px);
+    height: 116px;
+}
+
+.custom-shape-divider-bottom-1602174550 .shape-fill {
     fill: white;
 }
 
+/* END SHAPE DIVIDER STUFF */
 
 
-/* End of shapedivider mostly */
+
+.intro {
+	position: relative;
+	min-height: 600px;
+	background: rgb(0,175,181);
+	background: linear-gradient(25deg, rgba(0,175,181,1) 0%, rgba(255,119,0,1) 100%);
+	margin-top: -15px;
+}
+
+.child1 {
+	position: relative;
+	min-height: 600px;
+	background-color: transparent;
+	margin-top: -600px;
+}
+
+.child2 {
+	position: relative;
+	min-height: 600px;
+	background-color: transparent;
+	margin-top: -600px;
+}
 
 body {
 	background-color: white;
@@ -52,38 +98,53 @@ a:hover {
 	background-color: var(--TWHITE);
 }
 
+/* #curves { */
+/* 	text-align: center; */
+/* 	font-family: 'Bebas Neue'; */
+/* 	color: white; */
+/* 	background-color: black; */
 
-
-
-#intro {
+/* } */
+.container {
+	position: absolute;
+}
+.curve1 {
+	height: 25vh;
 	position: relative;
-	background: var(--BBLUE);
-	background: linear-gradient(0deg, var(--BBLUE) 0%, rgba(213,199,188,1) 100%);
-	min-height: 75vh;
-	text-align: center;
-	font-family: 'Bebas Neue';
-	color: white;
+	background-color: black;
+	margin-bottom: 250px;
+	margin-top: -50px;
 }
 
-#intro h1 {
+.curve2 {
+	height: 20vh;
+	position: relative;
+	background: linear-gradient(0deg, var(--ORANGE) 0%, var(--INDIGO) 100%);
+	background: var(--INDIGO);
+}
+
+
+#curves h1 {
 	padding-top: 10vh;
 	font-size: 75px;
 		
 }
 
-#intro h2 {
+#curves h2 {
 	font-size: 35px;
 }
 
-
-
-
-.welcome {
-	animation: fadeOnBoot 2s;
+.introText {
+	text-align: center;
+	font-family: 'Bebas Neue';
+	color: white;
 }
 
 
-
+.welcome {
+	padding-top: 120px;
+	animation: fadeOnBoot 2s;
+}
 
 .redir {
 	padding-top: 10vh;
