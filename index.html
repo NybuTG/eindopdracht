@@ -4,22 +4,38 @@
 		<title>Share | The Future of FT</title>
 		<meta charset="UTF-8">
 
-		<link rel=stylesheet href="style/main.css">
 		<script src="js/main.js"></script>
+		<link rel=stylesheet href="style/main.css">
+		<link rel=stylesheet href="style/animations.css">
 
-		<! -- Animate.css 
-			- Everything prefixed with "animate" is from animate.css
-		-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-		
+		<!-- Google Icon Font -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	</head>
 	<body>
 
 		<!-- The intro (Everything within the gradient)-->
 		<div id="intro">
 
-			<h1 class="animate__animated animate__fadeInDownBig" id="welcome">Hello <script>getOs()</script> user</h1>
+			<!-- Nav Bar -->
+			<div class=navigation_bar>
+				<ul>
+					<li><a class="bar fadein" href="downloads.html">Downloads</a></li>
+					<li><a class="bar fadein" href="starting.html" >Getting Started</a></li>
+					<li><a class="bar fadein" href="contact.html" >Contact</a></li>
+				</u>
+			</div>
 
+			<div class="welcome">
+				<h1>Hello <script>getOs()</script> user</h1>
+				<h2>Welcome to the future of file transfer</h2>
+			</div>
+
+			<div class="redir">
+				<a class="fadein" href="more.html">Learn More</a>
+			</div>
+
+			
 			<!-- DO NOT TOUCH THIS IT MIGHT BREAK THE CURVE
 				     Made with https://shapediver.app/ -->
 			<div class="custom-shape-divider-bottom-1601375962">
@@ -28,7 +44,20 @@
 				</svg>
 			</div>
 			<!-- You can start working with it from here -->
+			
+			<!-- Claims -->
 		</div>
 
+		<div class=claims>
+			<div id=num1>
+				<img width="150px" height="150px" src="images/opensource.png">
+				<div class=text>
+					<h4>Completely Open Source</h4>
+					<p>Share is completely Open Source, so you can do whatever you want with it,
+					as well as ensuring that your data won't stolen: But most importantly
+					you, and also others can contribute to make it ever better!</p>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

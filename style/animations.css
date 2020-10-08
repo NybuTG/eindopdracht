@@ -1,0 +1,21 @@
+.fadein {
+	transition-property: color, background-color;
+	transition-duration: 200ms 200ms;
+	transition-timing-function: linear ease-in;
+
+	-webkit-transition-property:color, background-color; 
+	-webkit-transition-duration: 200ms, 200ms; 
+	-webkit-transition-timing-function: linear, ease-in;
+}
+
+@keyframes fadeOnBoot {
+	0% {
+		opacity: 0;
+		transform: translateY(100%)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0%)
+	}
+}

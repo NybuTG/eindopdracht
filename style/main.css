@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css");
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
-}
+	--BBLUE: #93b7be;
+	--TWHITE: rgba(255, 255, 255, .6)
+} 
 
 /* From the shapedivider generator: */
 .custom-shape-divider-bottom-1601375962 {
@@ -22,27 +27,122 @@
 }
 
 .custom-shape-divider-bottom-1601375962 .shape-fill {
-    fill: #FFFFFF;
+    fill: white;
 }
 
 
 
 /* End of shapedivider mostly */
 
+body {
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+	margin: 20px;
+	padding: 10px;
+	color: white; 
+	background-color: transparent; 
+	border-radius: 15px;
+}
+
+a:hover {
+	color: var(--BBLUE);
+	background-color: var(--TWHITE);
+}
+
+
+
+
 #intro {
 	position: relative;
-	background: rgb(147,183,190);
-	background: linear-gradient(0deg, rgba(147,183,190,1) 0%, rgba(213,199,188,1) 100%);
+	background: var(--BBLUE);
+	background: linear-gradient(0deg, var(--BBLUE) 0%, rgba(213,199,188,1) 100%);
 	min-height: 75vh;
-
+	text-align: center;
 	font-family: 'Bebas Neue';
 	color: white;
 }
 
 #intro h1 {
-	text-align: center;
-	padding-top: 20vh;
+	padding-top: 10vh;
 	font-size: 75px;
 		
+}
+
+#intro h2 {
+	font-size: 35px;
+}
+
+
+
+
+.welcome {
+	animation: fadeOnBoot 2s;
+}
+
+
+
+
+.redir {
+	padding-top: 10vh;
+}
+
+.redir a {
+	font-size: 32px;
+	border: 3px solid var(--TWHITE);
+	border-radius: 30px;
+}
+
+.redir a:hover {
+	border: 0px solid transparent;
+	padding: 13px
+}
+
+
+
+
+.navigation_bar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navigation_bar ul {
+	padding-top: 40px;
+	background-color: transparent;
+}
+
+.navigation_bar li {
+	display: inline;
+	font-size: 26px;
+	padding: 50px;
+}
+
+
+
+.claims h4 {
+	font-family: 'Hack', Fallback, sans-serif;
+}
+
+.claims p {
+	font-family: 'Zilla Slab', serif;
+}
+
+.claims #num1 img {
+	filter: hue-rotate(85deg) saturate(0.33);
+}
+
+.claims #num1 {
+	padding-top: 10vh;
+	padding-left: 38%;
+	display: flex;
+	color: black;
+}
+
+.claims #num1 .text {
+	padding-left: 25px;
+	width: 250px;
 }
 
