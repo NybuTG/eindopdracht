@@ -7,38 +7,19 @@
 		<script src="js/main.js"></script>
 		<link rel=stylesheet href="style/main.css">
 		<link rel=stylesheet href="style/animations.css">
-
+	
 		<!-- Google Icon Font -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	</head>
 	<body>
-
-		<div class=parent>
-			<div class=intro>
-				<div class=introText>
-
-					<!-- Nav Bar -->
-					<div class=navigation_bar>
-						<ul>
-							<li><a class="bar fadein" href="downloads.html">Downloads</a></li>
-							<li><a class="bar fadein" href="starting.html" >Getting Started</a></li>
-							<li><a class="bar fadein" href="contact.html" >Contact</a></li>
-						</u>
-					</div>
-
-					<div class="welcome">
-						<h1>Hello <script>getOs()</script> user</h1>
-						<h2>Welcome to the future of file transfer</h2>
-					</div>
-
-					<div class="redir">
-						<a class="fadein" href="more.html">Learn More</a>
-					</div>
-				</div>
-
-			</div>
-
+		<div class=laptop>
+			<div class=circle></div>
+		</div>
+		
+		<!-- This is all the code for the gradient -->
+		<div id=home>
+			<div class=intro></div>
 
 			<!-- shapedivider.app -->
 			<div class=child1>
@@ -48,6 +29,7 @@
 					</svg>
 				</div>
 			</div>
+
 			<div class=child2>
 				<div class="custom-shape-divider-bottom-1602174550">
 					<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -56,32 +38,68 @@
 				</div>
 			</div>
 
+			<!-- Actual Content -->	
+			<div class=content>
+				<!-- Nav Bar -->
+				<div class=navigation_bar>
+					<ul>
+						<li><a class=fadein href="downloads.html">Downloads</a></li>
+						<li><a class=fadein href="starting.html" >Getting Started</a></li>
+						<li><a class=fadein href="contact.html" >Contact</a></li>
+						<li style="float:left; font-weight: bold;"><a class=fadein href="index.html">◆ SHAREAPP</a></li>
+					</u>
+				</div>
+				
+				<!-- For centering the text -->
+
+				<div class="welcome">
+					<h1>Hello <script>document.write(getOs())</script> user</h1>
+					<h2>Welcome to the future of file transfer</h2>
+				</div>
+				<div class="center redir">
+					<a class="fadein" href="#sec2">Learn More</a>
+				</div>
+
+				<div class=circle>
+					<div class=laptop>
+						<div class="top">
+							<div class="screen">
+								<p>Share<p>
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="keyboard"></div>
+						</div>
+					</div>
+					
+					<div class=shadow>
+						<div style="background-color: black; border-radius: 10px; opacity: 0.25;" class="bottom">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<!-- Claims -->
-		<div class=claims>
+		<div id="sec2" class=claims>
+			<div id=num1>
+				<img width="150px" height="150px" src="images/opensource.png">
+				<div class=text>
+					<h4>Completely Open Source</h4>
+					<p>Share is completely Open Source, so you can do whatever you want with it,
+					as well as ensuring that your data won't stolen: But most importantly
+					you, and also others can contribute to make it ever better!</p>
+				</div>
+			</div>
+			<div id=num1>
+				<img width="150px" height="150px" src="images/opensource.png">
+				<div class=text>
+					<h4>Completely Open Source</h4>
+					<p>Share is completely Open Source, so you can do whatever you want with it,
+					as well as ensuring that your data won't stolen: But most importantly
+					you, and also others can contribute to make it ever better!</p>
+				</div>
+			</div>
 			<div id=num1>
 				<img width="150px" height="150px" src="images/opensource.png">
 				<div class=text>
@@ -93,4 +111,4 @@
 			</div>
 		</div>
 	</body>
-</html>
+</html

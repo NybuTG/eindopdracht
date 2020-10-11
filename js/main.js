@@ -5,7 +5,6 @@
 function getOs() {
 	var osName = "unkown"
 	
-	console.log(navigator.platform)
 	if (navigator.platform.indexOf("Win") !=- 1) osName="windows";
 	if (navigator.platform.indexOf("Mac") !=- 1) osName="macos";
 	if (navigator.platform.indexOf("Mac") !=- 1) osName="unix";
@@ -13,5 +12,8 @@ function getOs() {
 	if (navigator.platform.indexOf("Mac") !=- 1) osName="android";
 	if (navigator.platform.indexOf("Linux") !=- 1) osName="linux";
 	
-	document.write(osName);
+	return osName;
 }
+
+
+

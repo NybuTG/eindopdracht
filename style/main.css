@@ -1,14 +1,54 @@
+
+
+/* TODO: Please, for the love of my sanity make the units something proper like vh/vw for */ 
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css");
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
 
+/* General Styling and classes to style the basics
+	     And for example a centering class
+*/
 * {
 	margin: 0;
 	padding: 0;
-	--INDIGO: #004777;
-	--ORANGE: #FF7700;
 	--TWHITE: rgba(255, 255, 255, .6)
 } 
+
+html { 
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color:  #EBEBEB;
+}
+
+a {
+	text-decoration: none;
+	margin: 20px;
+	padding: 10px;
+	color: #EBEBEB; 
+	background-color: transparent; 
+	border-radius: 15px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+	background-color: #EBEBEB;
+	color: #CC5200;
+
+}
+
+.active {
+	background-color: rgba(255, 255, 255, 0.2) 
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
 
 /* SHAPE DIVIDER STUFF */
 
@@ -41,7 +81,7 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-}
+} 
 
 .custom-shape-divider-bottom-1602174550 svg {
     position: relative;
@@ -51,21 +91,25 @@
 }
 
 .custom-shape-divider-bottom-1602174550 .shape-fill {
-    fill: white;
+    fill: #EBEBEB;
 }
 
 /* END SHAPE DIVIDER STUFF */
 
-
+/* 
+* Classes are in order, so the higher up the html code is,
+*  the higher the css is here (With some exceptions)
+*/
 
 .intro {
+	color: #EBEBEB;
 	position: relative;
-	min-height: 600px;
-	background: rgb(0,175,181);
-	background: linear-gradient(25deg, rgba(0,175,181,1) 0%, rgba(255,119,0,1) 100%);
+	min-height: 90vh;
+	background: linear-gradient(25deg, #FF6700 0%, #3A6EA5 100%);
 	margin-top: -15px;
 }
 
+/* Negative margins for overlap - not the best but it works...*/
 .child1 {
 	position: relative;
 	min-height: 600px;
@@ -80,108 +124,148 @@
 	margin-top: -600px;
 }
 
-body {
-	background-color: white;
-}
-
-a {
-	text-decoration: none;
-	margin: 20px;
-	padding: 10px;
-	color: white; 
-	background-color: transparent; 
-	border-radius: 15px;
-}
-
-a:hover {
-	color: var(--BBLUE);
-	background-color: var(--TWHITE);
-}
-
-/* #curves { */
-/* 	text-align: center; */
-/* 	font-family: 'Bebas Neue'; */
-/* 	color: white; */
-/* 	background-color: black; */
-
-/* } */
-.container {
+.content {
 	position: absolute;
-}
-.curve1 {
-	height: 25vh;
-	position: relative;
-	background-color: black;
-	margin-bottom: 250px;
-	margin-top: -50px;
-}
-
-.curve2 {
-	height: 20vh;
-	position: relative;
-	background: linear-gradient(0deg, var(--ORANGE) 0%, var(--INDIGO) 100%);
-	background: var(--INDIGO);
+	top: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: #EBEBEB;
+	font-family: 'Montserrat', sans-serif;
 }
 
-
-#curves h1 {
-	padding-top: 10vh;
-	font-size: 75px;
-		
+.content h1 {
+	font-family: "Bebas Neue";
+	text-decoration: none;
+	font-size: 12vh;
+	letter-spacing: 0.1vh;
 }
 
-#curves h2 {
-	font-size: 35px;
+/* Back to home button */
+.totop {
+	z-index: 199 !important;
+	position: fixed;
+	left: 95%;
+	border-radius: 50%;
+	background: #182e45;
+	border: 1px #182e45 solid;
+	width: 3vh;
+	font-size: 3vh;
+	height: 3vh;
+	top: 90%;
+}
+/* Nav Bar and its items */
+.navigation_bar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 10vh;
 }
 
-.introText {
+
+.navigation_bar li {
+	float: right;
+	padding-top: 3vh;
+	font-size: 2.5vh;
+	color: #EBEBEB;
 	text-align: center;
-	font-family: 'Bebas Neue';
-	color: white;
+	text-decoration: none;
 }
-
 
 .welcome {
-	padding-top: 120px;
+	text-align: center;
+	margin-top: 10%;
+
+	/* Slide in and Fade animation (in animations.css) */
 	animation: fadeOnBoot 2s;
 }
 
 .redir {
-	padding-top: 10vh;
+	margin-top: 5%;
+	font-size: 5vh;
 }
-
 .redir a {
+	border: 3px #EBEBEB solid;
+}
+
+/* Laptop Logo Decoration Thing */
+.content .circle {
+	width: 360px;
+	height: 360px;
+    background-color: #e3e3e3;
+	margin-top: -40vh;
+	margin-left: 150vh;
+	border-radius: 50%;
+}
+
+.laptop {
+	position: absolute;
+	margin-top: 20px;
+	margin-left: -10px;
+	border-radius: 5px;
+	z-index: 2 !important;
+}
+
+.top {
+	width: 270px;
+	height: 180px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	margin-left: 53px;
+	transform: skew(-5deg);
+	background: #182e45;
+}
+
+.screen {
+	width: 225px;
+	height: 150px;
+	margin-left: 22px;
+	position: absolute;
+	margin-top: 18px;
+	transform: skew(0.5deg);
+	background: #EBEBEB;
+	border-radius: 6px;
+}
+
+.screen p {
+	color: #0e1b29;
 	font-size: 32px;
-	border: 3px solid var(--TWHITE);
-	border-radius: 30px;
+	text-transform: uppercase;
+	margin-top: 25%;
+	margin-left: 25%;
 }
 
-.redir a:hover {
-	border: 0px solid transparent;
-	padding: 13px
+.bottom {
+	width: 270px;
+	height: 90px;
+	transform: skew(-45deg);
+	background: #0e1b29;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 6px;
 }
 
-
-
-
-.navigation_bar {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+.shadow {
+	margin-top: 216px;
+	position: absolute;
+	z-index: 0 !important;
 }
 
-.navigation_bar ul {
-	padding-top: 40px;
-	background-color: transparent;
+.keyboard {
+	margin-left: 50px;
+	margin-top: 20px;
+	position: absolute;
+	width: 153px;
+	height: 38px;
+	background: #182e45;
+	border-radius: 5px;
 }
 
-.navigation_bar li {
-	display: inline;
-	font-size: 26px;
-	padding: 50px;
+.claims {
+	position: absolute;
+	top: 120vh;
+	width: 100%;
 }
-
-
 
 .claims h4 {
 	font-family: 'Hack', Fallback, sans-serif;
@@ -197,8 +281,7 @@ a:hover {
 
 .claims #num1 {
 	padding-top: 10vh;
-	padding-left: 38%;
-	display: flex;
+	padding-left: 38%; display: flex;
 	color: black;
 }
 

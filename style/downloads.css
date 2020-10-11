@@ -1,0 +1,31 @@
+a:hover {
+	color: #3A6EA5;
+}
+
+.navigation_bar {
+	background-color: #3A6EA5;
+	height: 8vh;
+}
+.navigation_bar ul {
+	height: 20vh;
+}
+.custom-shape-divider-top-1602436186 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1602436186 svg {
+    position: relative;
+    display: block;
+    width: calc(110% + 1.3px);
+    height: 46px;
+}
+
+.custom-shape-divider-top-1602436186 .shape-fill {
+    fill: #3A6EA5;
+}
