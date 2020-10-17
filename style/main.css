@@ -38,7 +38,7 @@ a {
 
 a:hover {
 	background-color: #EBEBEB;
-	color: #CC5200;
+	color: #A31621;
 
 }
 
@@ -105,7 +105,7 @@ a:hover {
 	color: #EBEBEB;
 	position: relative;
 	min-height: 90vh;
-	background: linear-gradient(25deg, #FF6700 0%, #3A6EA5 100%);
+	background: #A31621;
 	margin-top: -15px;
 }
 
@@ -141,19 +141,6 @@ a:hover {
 	letter-spacing: 0.1vh;
 }
 
-/* Back to home button */
-.totop {
-	z-index: 199 !important;
-	position: fixed;
-	left: 95%;
-	border-radius: 50%;
-	background: #182e45;
-	border: 1px #182e45 solid;
-	width: 3vh;
-	font-size: 3vh;
-	height: 3vh;
-	top: 90%;
-}
 /* Nav Bar and its items */
 .navigation_bar ul {
 	list-style-type: none;

@@ -5,9 +5,16 @@ body {
 	background-color: #F1F7ED;
 }
 .navigation_bar a {
-	color: #E0FBFC;
+	color: #F1F7ED;
 }
 
+.navigation_bar a:hover {
+	background-color: rgba(255, 255, 255, 0.25)
+}
+
+.active {
+	background-color: rgba(255, 255, 255, 0.1)
+}
 .intro {
 	background: #7CA982;
 }
@@ -107,8 +114,7 @@ body {
 	grid-template-columns: auto;
 	padding: 1vh;
 	width: 500px;
-	height: 102.5vh;
-	margin-top: 15vh;
+	height: 110vh;
 }
 .item {
 	background-color: #DEECD5;
@@ -122,6 +128,13 @@ body {
 
 .downloads a {
 	background-color: #0B3948;
+	border-radius: 4vh;
+	border: 0.25vw #0B3948 solid;
+}
+
+.downloads a:hover {
+	background-color: transparent;
+	color: #0B3948;
 }
 
 .downloads p {

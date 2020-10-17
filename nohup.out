@@ -13892,3 +13892,452 @@ Traceback (most recent call last):
     self.handle_one_request()
   File "/usr/lib/python3.8/http/server.py", line 415, in handle_one_request
     method()
+  File "/usr/lib/python3.8/http/server.py", line 654, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/lib/python3.8/http/server.py", line 853, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/usr/lib/python3.8/shutil.py", line 205, in copyfileobj
+    fdst_write(buf)
+  File "/usr/lib/python3.8/socketserver.py", line 799, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [17/Oct/2020 13:29:27] "GET /bins/windows.txt HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:29:32] "GET /bins/windows.txt HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:33:17] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:05] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:06] "GET /favicon.ico HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 48670)
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.8/http/server.py", line 647, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/usr/lib/python3.8/http/server.py", line 427, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.8/http/server.py", line 415, in handle_one_request
+    method()
+  File "/usr/lib/python3.8/http/server.py", line 654, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/lib/python3.8/http/server.py", line 853, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/usr/lib/python3.8/shutil.py", line 205, in copyfileobj
+    fdst_write(buf)
+  File "/usr/lib/python3.8/socketserver.py", line 799, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:09] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:13] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:21] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /style/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /style/animations.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /images/windows_intro.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /images/windows_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /images/macos_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /images/macos_intro.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /images/linux_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /images/github_logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:29] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:34] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:37] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:48] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:50] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:50] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:50] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:51] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:51] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:51] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:51] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:51] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:51] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:34:55] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:18] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:18] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:18] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:37:18] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:19] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:19] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:19] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:19] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:19] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:24] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:39] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:46] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:37:51] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:38:07] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:07] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:25] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:39:58] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:14] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:40:38] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:41:23] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:41:23] "GET /images/opensource.png HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 49168)
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.8/http/server.py", line 647, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/usr/lib/python3.8/http/server.py", line 427, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.8/http/server.py", line 415, in handle_one_request
+    method()
+  File "/usr/lib/python3.8/http/server.py", line 654, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/lib/python3.8/http/server.py", line 853, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/usr/lib/python3.8/shutil.py", line 205, in copyfileobj
+    fdst_write(buf)
+  File "/usr/lib/python3.8/socketserver.py", line 799, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [17/Oct/2020 13:41:25] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:41:25] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:41:42] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:41:42] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:42:04] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:43:38] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:12] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:44:50] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:45:55] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:49:10] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:49:11] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:54:41] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:54:41] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:54:41] "GET /images/opensource.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:54:44] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:44] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:54:44] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:54:44] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /style/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /style/animations.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /images/windows_intro.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /images/macos_intro.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /images/github_logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /images/macos_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /images/windows_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /images/linux_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:54:46] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:55:00] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:55:00] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:00] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:00] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:00] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:00] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:00] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:00] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:04] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:55:04] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:04] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:04] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:04] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:04] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:04] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:04] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:09] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:55:09] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:09] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:09] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:09] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:09] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:09] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:09] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:22] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:55:22] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:22] "GET /images/windows_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:22] "GET /images/macos_intro.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:22] "GET /images/windows_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:22] "GET /images/linux_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:22] "GET /images/macos_square.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:55:22] "GET /images/github_logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:56:02] code 404, message File not found
+127.0.0.1 - - [17/Oct/2020 13:56:02] "GET /contact.html HTTP/1.1" 404 -
+127.0.0.1 - - [17/Oct/2020 13:56:06] code 404, message File not found
+127.0.0.1 - - [17/Oct/2020 13:56:06] "GET /starting.html HTTP/1.1" 404 -
+127.0.0.1 - - [17/Oct/2020 13:56:43] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:56:43] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:56:43] "GET /images/opensource.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:56:50] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:56:50] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:56:50] "GET /images/opensource.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:56:51] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:56:51] "GET /js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:56:51] "GET /style/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:56:51] "GET /style/animations.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:56:51] "GET /images/opensource.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:56:51] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:57:05] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:57:05] "GET /style/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:57:05] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:11] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:12] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:12] "GET /style/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:58:12] "GET /images/opensource.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:14] "GET /style/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:33] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:33] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:33] "GET /style/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:58:33] "GET /images/opensource.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:40] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:40] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:40] "GET /style/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 13:58:40] "GET /images/opensource.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:53] "GET /downloads.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:54] "GET /style/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 13:58:54] "GET /style/downloads.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Oct/2020 14:01:29] "GET /bins/windows.txt HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /downloads.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /style/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /style/animations.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /style/downloads.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /images/windows_intro.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /images/macos_intro.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /images/windows_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /images/macos_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /images/linux_square.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:39] "GET /images/github_logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:40] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:41] "GET /bins/macos.txt HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:49] "GET /favicon.ico HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 49786)
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.8/http/server.py", line 647, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/usr/lib/python3.8/http/server.py", line 427, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.8/http/server.py", line 415, in handle_one_request
+    method()
+  File "/usr/lib/python3.8/http/server.py", line 654, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/lib/python3.8/http/server.py", line 853, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/usr/lib/python3.8/shutil.py", line 205, in copyfileobj
+    fdst_write(buf)
+  File "/usr/lib/python3.8/socketserver.py", line 799, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [17/Oct/2020 14:01:49] "GET /bins/linux.txt HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2020 14:01:55] code 404, message File not found
+127.0.0.1 - - [17/Oct/2020 14:01:55] "GET /binswindows.txt HTTP/1.1" 404 -
+127.0.0.1 - - [17/Oct/2020 14:01:56] code 404, message File not found
+127.0.0.1 - - [17/Oct/2020 14:01:56] "GET /binswindows.txt HTTP/1.1" 404 -
+127.0.0.1 - - [17/Oct/2020 14:01:58] code 404, message File not found
