@@ -52,7 +52,11 @@
 			<div class=message>
 				<h1>Get it now - There's nothing stopping you</h1>
 				<p>Download Shareapp today, a world of change awaits you. Start sharing from your phone to pc or mac now.</p>
-				<a class="fadein download">Download for <script>document.write(getOs())</script></a>
+
+				<span style=display:flex; class=top_downloads>
+					<a class="fadein download">Download for <script>document.write(getOs())</script></a>
+					<a href="#downloads" class="otherdl" >Other Versions</a>
+				</span>
 			</div>
 
 			<div class=devices>
@@ -60,7 +64,7 @@
 				<img style=max-width:25vw; class=responsive_image id=mac src="images/macos_intro.png"></img>
 			</div>
 		</div>
-		<div class=downloads>
+		<div id=downloads class=downloads>
 			<div class=left>
 
 				<div class=item>

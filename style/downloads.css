@@ -145,3 +145,20 @@ body {
 	max-width: 20vw;
 	height: auto;
 }
+
+.otherdl {
+	margin-left: 14vw;
+	margin-top: 3.5vh;
+	font-size: 2.2vh;
+	text-decoration: underline;
+}
+
+.otherdl:hover {
+	background-color: transparent;
+	color: white;
+	text-decoration: none;
+}
+
+.navigation_bar {
+	background-color: #7CA982;
+}
