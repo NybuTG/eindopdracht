@@ -1,31 +1,134 @@
-a:hover {
-	color: #3A6EA5;
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
+
+body {
+	background-color: #F1F7ED;
+}
+.navigation_bar a {
+	color: #E0FBFC;
 }
 
-.navigation_bar {
-	background-color: #3A6EA5;
-	height: 8vh;
-}
-.navigation_bar ul {
-	height: 20vh;
-}
-.custom-shape-divider-top-1602436186 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+.intro {
+	background: #7CA982;
 }
 
-.custom-shape-divider-top-1602436186 svg {
-    position: relative;
-    display: block;
-    width: calc(110% + 1.3px);
-    height: 46px;
+.custom-shape-divider-bottom-1602174550 .shape-fill {
+	fill: #F1F7ED;
 }
 
-.custom-shape-divider-top-1602436186 .shape-fill {
-    fill: #3A6EA5;
+.custom-shape-divider-bottom-1602170659 .shape-fill {
+	fill: #DEECD5;
+}
+
+.link h1 {
+	font-size: 6vh;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.message {
+	left: 10vw;
+	top: 25vh;
+	position: absolute;
+	width: 25vw;
+	z-index: 99;
+}
+
+.message h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 3.5vh;
+	color: #FCF7F8;
+}
+
+.message p {
+	margin-top: 1vh;
+	font-family: 'Commissioner', sans-serif;
+	font-size: 3vh;
+	color: #FCF7F8;
+}
+
+.download {
+	background-color: #FCF7F8;
+	color: #7CA982;
+	padding: 0.75vw;
+	font-size: 2.5vh;
+	border-radius: 2vw;
+	position: absolute;
+	border: 0.25vw solid #FCF7F8;
+	top: 11vw;
+	left: -1vw;
+}
+
+.download:hover {
+	background-color: transparent;
+	border: 0.25vw solid #FCF7F8;
+	color: #FCF7F8;
+}
+
+.devices {
+	position: absolute;
+	top: 20vh;
+	left: 45vw;
+}
+
+.devices #mac {
+	position: absolute;
+	top: 11vh;
+	left: 9vw;
+}
+/* TODO: Change godawful button */
+.text a {
+	font-family: 'Fira Sans Condensed', sans-serif;
+	background-color: #0B3948;
+	border-radius: 2.3vw;
+	font-size: 5vh;
+	padding: 2vh;
+}
+
+
+.downloads {
+	display: flex;
+	margin-left: 20vw;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+.left {
+	margin-top: 10vh;
+	display: grid;
+	grid-gap: 1.25vw;
+	grid-template-columns: auto;
+	padding: 1vh;
+	width: 500px;
+	height: 120vh;
+}
+.right {
+	display: grid;
+	grid-gap: 1.25vw;
+	grid-template-columns: auto;
+	padding: 1vh;
+	width: 500px;
+	height: 102.5vh;
+	margin-top: 15vh;
+}
+.item {
+	background-color: #DEECD5;
+	border-radius: 1vw;
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+	height: 60vh;
+}
+
+
+.downloads a {
+	background-color: #0B3948;
+}
+
+.downloads p {
+	font-family: 'Montserrat', sans-serif;
+}
+.responsive_image {
+	width: 100%;
+	max-width: 20vw;
+	height: auto;
 }

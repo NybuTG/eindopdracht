@@ -8,28 +8,88 @@
 		<link rel=stylesheet href="style/main.css">
 		<link rel=stylesheet href="style/downloads.css">
 		<link rel=stylesheet href="style/animations.css">
-
+	
 		<!-- Google Icon Font -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	</head>
 	<body>
-		<!-- Nav Bar -->
-		<div class=navigation_bar>
+		<!-- This is all the code for the gradient -->
+		<div id=home>
+			<div class=intro></div>
 
-			<ul>
-				<li style="font-weight: bold;"><a class="active fadein" href="downloads.html">Downloads</a></li>
-				<li><a class=fadein href="starting.html" >Getting Started</a></li>
-				<li><a class=fadein href="contact.html" >Contact</a></li>
-				<li style="float:left; font-weight: bold;"><a class="fadein" href="index.html">◆ SHAREAPP</a></li>
-			</ul>
-		</div>
-		<div style="z-index: -99; min-height: 4vh; position: relative;">
-			<div class="custom-shape-divider-top-1602436186">
-				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-					<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-				</svg>
+			<!-- shapedivider.app -->
+			<div class=child1>
+				<div class="custom-shape-divider-bottom-1602170659">
+					<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+						<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+					</svg>
+				</div>
+			</div>
+
+			<div class=child2>
+				<div class="custom-shape-divider-bottom-1602174550">
+					<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+						<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+					</svg>
+				</div>
+			</div>
+
+			<!-- Actual Content -->	
+			<div class=content>
+				<!-- Nav Bar -->
+				<div class=navigation_bar>
+					<ul>
+						<li><a class=fadein href="downloads.html">Downloads</a></li>
+						<li><a class=fadein href="starting.html" >Getting Started</a></li>
+						<li><a class=fadein href="contact.html" >Contact</a></li>
+						<li style="float: left; font-weight: bold;"><a class=fadein href="index.html">◆ SHAREAPP</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class=message>
+				<h1>Get it now - There's nothing stopping you</h1>
+				<p>Download Shareapp today, a world of change awaits you. Start sharing from your phone to pc or mac now.</p>
+				<a class="fadein download">Download for <script>document.write(getOs())</script></a>
+			</div>
+
+			<div class=devices>
+				<img id=pc src="images/windows_intro.png"></img>
+				<img id=mac src="images/macos_intro.png"></img>
 			</div>
 		</div>
+		<div class=downloads>
+			<div class=left>
+
+				<div class=item>
+					<img src="images/windows_square.png" alt="Windows PC" class=responsive_image></img>
+					<p style=margin-bottom:4vh;>Windows</p>
+					<a href=bins/windows.txt download>Download</a>
+				</div>
+
+				<div class=item>
+					<img src="images/linux_square.png" alt="Linux PC" class=responsive_image></img>
+					<p style=margin-bottom:4vh;>Linux</p>
+					<a href=bins/windows.txt download>Download</a>
+				</div>
+			</div>
+
+			<div class=right>
+				<div style=height:50vh; class=item>
+					<img style="max-width:30vw;"src="images/macos_square.png" alt="Macbook" class=responsive_image></img>
+					<p style=margin-bottom:4vh;margin-top:-16vh;>macOS</p>
+					<a href=bins/windows.txt download>Download</a>
+				</div>
+				<div style=height:52.5vh; class=item>
+					<!-- https://pngimg.com/uploads/github/github_PNG20.png -->
+					<img style="max-width:15vw;"src="images/github_logo.png" alt="Github Logo" class=responsive_image></img>
+					<p style=margin-bottom:4vh;margin-top:4vh;>Source Code</p>
+					<a href=https://github.com/nybutg/shareapp>Github</a>
+				</div>
+			</div>
+		</div>
+		<div style="height: 50vh;"></div>
 	</body>
 </html
