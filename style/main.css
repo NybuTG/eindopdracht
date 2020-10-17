@@ -28,11 +28,11 @@ body {
 
 a {
 	text-decoration: none;
-	margin: 20px;
-	padding: 10px;
+	margin: 0.5vw;
+	padding: 0.75vw;
 	color: #EBEBEB; 
 	background-color: transparent; 
-	border-radius: 15px;
+	border-radius: 3vw;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -141,6 +141,10 @@ a:hover {
 	letter-spacing: 0.1vh;
 }
 
+.content h2 {
+	font-size: 3vh;
+}
+
 /* Nav Bar and its items */
 .navigation_bar ul {
 	list-style-type: none;
@@ -173,80 +177,25 @@ a:hover {
 	font-size: 5vh;
 }
 .redir a {
-	border: 3px #EBEBEB solid;
+	border: 0.5vh #EBEBEB solid;
 }
 
 /* Laptop Logo Decoration Thing */
-.content .circle {
-	width: 360px;
-	height: 360px;
-    background-color: #e3e3e3;
-	margin-top: -40vh;
-	margin-left: 150vh;
-	border-radius: 50%;
+.laptop_container p {
+	top: 40vh;
+	left: 79.8vw;
+	position: absolute;
+	font-size: 5vh;
+	color: #182e45;
+	transform: skew(-5deg)
 }
-
 .laptop {
 	position: absolute;
-	margin-top: 20px;
-	margin-left: -10px;
-	border-radius: 5px;
-	z-index: 2 !important;
+	top: 25vh;
+	left: 70vw;
+	/* z-index: 2 !important; */
 }
 
-.top {
-	width: 270px;
-	height: 180px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	margin-left: 53px;
-	transform: skew(-5deg);
-	background: #182e45;
-}
-
-.screen {
-	width: 225px;
-	height: 150px;
-	margin-left: 22px;
-	position: absolute;
-	margin-top: 18px;
-	transform: skew(0.5deg);
-	background: #EBEBEB;
-	border-radius: 6px;
-}
-
-.screen p {
-	color: #0e1b29;
-	font-size: 32px;
-	text-transform: uppercase;
-	margin-top: 25%;
-	margin-left: 25%;
-}
-
-.bottom {
-	width: 270px;
-	height: 90px;
-	transform: skew(-45deg);
-	background: #0e1b29;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 6px;
-}
-
-.shadow {
-	margin-top: 216px;
-	position: absolute;
-	z-index: 0 !important;
-}
-
-.keyboard {
-	margin-left: 50px;
-	margin-top: 20px;
-	position: absolute;
-	width: 153px;
-	height: 38px;
-	background: #182e45;
-	border-radius: 5px;
-}
 
 .claims {
 	position: absolute;
